@@ -1,0 +1,33 @@
+#include <stdio.h>
+
+const int falsch = 0;
+const int wahr = 1;
+
+int prim(int zahl){
+    int i;
+    if (zahl == 1) return falsch;
+    if (zahl ==2) return wahr;
+    for (i= 2; i < zahl; i++){
+        if (zahl % i == 0)return falsch ;
+        
+    }
+    
+    return wahr;
+    
+    
+}
+    
+int main () {
+    
+   
+    int zahl;
+    for(zahl = 1; zahl <100; zahl++){
+        if(prim(zahl)) printf("%i\n",zahl);
+        
+    }
+    return 0;
+    
+    
+}
+
+
